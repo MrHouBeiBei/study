@@ -1,0 +1,79 @@
+{
+    // 使用 IntelliSense 以学习相关的 Node.js 调试属性。
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "type": "extensionHost",
+            "request": "launch",
+            "name": "启动扩展",
+            "runtimeExecutable": "${execPath}",
+            "args": [
+                "--extensionDevelopmentPath=${workspaceRoot}"
+            ],
+            "sourceMaps": true,
+            "outFiles": [
+                "${workspaceRoot}/out/**/*.js"
+            ],
+            "preLaunchTask": "npm"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceRoot}/app.js"
+            // "program": "${workspaceRoot}/test.js"
+        },
+        {
+            "type": "extensionHost",
+            "request": "launch",
+            "name": "启动扩展",
+            "runtimeExecutable": "${execPath}",
+            "args": [
+                "--extensionDevelopmentPath=${workspaceRoot}"
+            ],
+            "sourceMaps": true,
+            "outFiles": [
+                "${workspaceRoot}/out/**/*.js"
+            ],
+            "preLaunchTask": "npm"
+        },
+        {
+            "type": "extensionHost",
+            "request": "launch",
+            "name": "启动扩展",
+            "runtimeExecutable": "${execPath}",
+            "args": [
+                "--extensionDevelopmentPath=${workspaceRoot}"
+            ],
+            "sourceMaps": true,
+            "outFiles": [
+                // "${workspaceRoot}/out/**/*.js"
+                 "${workspaceRoot}/greeter.js"
+            ],
+            "preLaunchTask": "npm"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Electron Main",
+            "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
+            "windows": {
+                "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd"
+            },
+            "program": "${workspaceRoot}/main.js",
+            "protocol": "legacy"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "启动程序",
+            "program": "${file}",
+            "outFiles": [
+                "${workspaceRoot}/out/**/*.js"
+            ]
+        }
+    ]
+}
